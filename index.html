@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="UTF-8" name="viewport" content="initial-scale=1, width=device-width">
 	<title>	HOTEIS NO RIO </title>	
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">	
-
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">		
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>	
 	
-	<script type="text/javascript" src="https://use.fontawesome.com/555d4f18d7.js"></script>	
-	
+	<script type="text/javascript" src="https://use.fontawesome.com/555d4f18d7.js"></script>		
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>	
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.js"></script>	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.css">
+
 	<link rel="stylesheet" href="assets/css/main.css">	
 	<script type="text/javascript" src="assets/js/main.js"></script>			
 </head>
@@ -20,8 +23,8 @@
 			<!--start slider-->
 			<div id="carouselSlides" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<a href="https://www.instagram.com/"><img src="assets/img/carousel/example1.jpg" alt=""></a>
+					<div class="carousel-item active" title="press over to see the promotion!">
+						<a href="https://www.instagram.com/" target="_blank"><img src="assets/img/carousel/example1.jpg" alt=""></a>
 					</div>
 					<div class="carousel-item">
 						<img src="assets/img/carousel/example2.jpg" alt="">
@@ -75,8 +78,7 @@
 			</div>				
 		</div>
 		<div class="col-sm-6">
-
-			<div id="sendForm">
+			<form id="sendForm">
 				<div class="col-sm-12  reserve-online">RESERVA EN LINEA</div>
 				<ul class="nav nav-tabs" id="sendFormTabs" role="tablist">
 					<li class="nav-item"><a class="nav-link active" href="#hotel" id="hotel-tab" data-toggle="tab" role="tab" aria-controls="hotel" aria-selected="true">Hotel</a></li>
@@ -89,33 +91,62 @@
 					<div class="tab-pane fade show active" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
 						<div class="row">
 							<div class="col-sm-12">
-								<label class="form-label" for="hotel">Destino/Hotel</label><br/>
+								<label class="form-label" for="hotelI">Destino/Hotel</label><br/>
 								<input type="text" id="hotelI" class="form-control">
 							</div>
 							<div class="col-sm-5">								
 								<label class="form-label" for="arrivalDay">Checada:</label><br/>
-								<input type="text" id="arrivalDay"/><i class="fa fa-calendar"></i>
+								<input type="text" id="arrivalDay" placeholder="dd/mm/yyyy"/><i class="fa fa-calendar"></i>
 								<br/>
 								<label class="form-label" for="leaveDay">Salida:</label><br/>
-								<input type="text" id="leaveDay"/><i class="fa fa-calendar"></i>								
+								<div id="divLeaveDay">
+									<input type="text" id="leaveDay" placeholder="dd/mm/yyyy" autocomplete="off" disabled="" readonly=""/><i class="fa fa-calendar"></i>
+								</div>																
 							</div>
 							<div class="col-sm-7">
 								<div class="row">
 									<div class="col-sm-4  sendFormIns">
 										<label class="form-label" for="rooms">Quartos</label>
-										<input type="number" id="rooms">
+										<input type="number" id="rooms" min="1" max="3">
 									</div>
-									<div class="col-sm-4  sendFormIns">
-										<label class="form-label" for="adults">Adultos</label>
-										<input type="number" id="adults">
-									</div>
-									<div class="col-sm-4  sendFormIns">
-										<label class="form-label" for="children">Criancas</label>
-										<input type="number" id="children">
+									<!--append columns-->
+									<div id="appenRooms" class="col-sm-8 add-after-rooms">										
+										<div class="row">											
+											<div class="col-sm-6 sendFormIns">
+												<label class="form-label" for="adults">Adultos</label>
+												<input type="number" id="adults">
+											</div>
+											<div class="col-sm-6 sendFormIns">
+												<label class="form-label" for="children">Criancas</label>
+												<input type="number" id="children">
+											</div>
+										</div>
+
+										<div class="row collapse" id="room2">											
+											<div class="col-sm-6 sendFormIns">
+												<label class="form-label" for="adults2">Adultos</label>
+												<input type="number" id="adults2">
+											</div>
+											<div class="col-sm-6 sendFormIns">
+												<label class="form-label" for="children2">Criancas</label>
+												<input type="number" id="children2">
+											</div>
+										</div>
+
+										<div class="row collapse" id="room3">											
+											<div class="col-sm-6 sendFormIns">
+												<label class="form-label" for="adults3">Adultos</label>
+												<input type="number" id="adults3">
+											</div>
+											<div class="col-sm-6 sendFormIns">
+												<label class="form-label" for="children3">Criancas</label>
+												<input type="number" id="children3">
+											</div>
+										</div>
 									</div>
 								</div>
 								<div class="row btn-reserve">
-									<button type="button" id="btnSendH" onclick="sendFormFNC($('').val())">RESERVAR AGORA</button>
+									<button type="button" id="btnSendH" onclick="sendFormHFNC($('#hotelI').val(),$('#arrivalDay').val(),$('#leaveDay').val(),$('#rooms').val(),$('#adults').val(),$('#children').val())">RESERVAR AGORA</button>
 								</div>
 							</div>
 						</div>
@@ -133,7 +164,7 @@
 						veritatis ipsam aperiam ab, itaque deleniti alias recusandae saepe soluta commodi nam reiciendis. Ab, placeat.
 					</div>
 				</div>
-			</div>
+			</form>
 		</div>
 		<div class="principal-content row">
 			<div class="description col-md-7 ml-md-auto ">
@@ -159,7 +190,67 @@
 			<div class="principal-atractions col-md-5 ml-md-auto ">
 				<h4>Lorem ipsum dolor sit amet</h4>
 				<div class="row">
-					<div class="col-md-12 ml-md-auto ">
+					<div class="col-md-12 ml-md-auto principal-atractions-rows">
+						<!--item row start-->
+						<div class="row">
+							<div class="col-md-6 ml-md-auto  principal-atractions-item">
+								<div class="row">
+									<div class="col-md-5 ml-md-auto ">
+										<img src="assets/img/package-description/destinies/item.jpg" alt="">
+									</div>
+									<div class="col-md-7 ml-md-auto ">
+										<span class="destiny">Lorem ipsum.</span><br/>										
+										<span>Lorem ipsum.</span><br/>
+										<span>R$</span> <span class="price">XXXX</span><br/>
+										<button type="button" class="destiny-reservation-btn">Reservar</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 ml-md-auto  principal-atractions-item">
+								<div class="row">
+									<div class="col-md-5 ml-md-auto ">
+										<img src="assets/img/package-description/destinies/item.jpg" alt="">
+									</div>
+									<div class="col-md-7 ml-md-auto ">
+										<span class="destiny">Lorem ipsum.</span><br/>										
+										<span>Lorem ipsum.</span><br/>
+										<span>R$</span> <span class="price">XXXX</span><br/>
+										<button type="button" class="destiny-reservation-btn">Reservar</button>
+									</div>
+								</div>
+							</div>
+						</div>	
+						<!--item row end-->
+						<!--item row start-->
+						<div class="row">
+							<div class="col-md-6 ml-md-auto  principal-atractions-item">
+								<div class="row">
+									<div class="col-md-5 ml-md-auto ">
+										<img src="assets/img/package-description/destinies/item.jpg" alt="">
+									</div>
+									<div class="col-md-7 ml-md-auto ">
+										<span class="destiny">Lorem ipsum.</span><br/>										
+										<span>Lorem ipsum.</span><br/>
+										<span>R$</span> <span class="price">XXXX</span><br/>
+										<button type="button" class="destiny-reservation-btn">Reservar</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 ml-md-auto  principal-atractions-item">
+								<div class="row">
+									<div class="col-md-5 ml-md-auto ">
+										<img src="assets/img/package-description/destinies/item.jpg" alt="">
+									</div>
+									<div class="col-md-7 ml-md-auto ">
+										<span class="destiny">Lorem ipsum.</span><br/>										
+										<span>Lorem ipsum.</span><br/>
+										<span>R$</span> <span class="price">XXXX</span><br/>
+										<button type="button" class="destiny-reservation-btn">Reservar</button>
+									</div>
+								</div>
+							</div>
+						</div>	
+						<!--item row end-->
 						<!--item row start-->
 						<div class="row">
 							<div class="col-md-6 ml-md-auto  principal-atractions-item">
@@ -217,10 +308,70 @@
 	</footer>
 </body>
 <script type="text/javascript">	
-  $(document).ready(function() {
-    $('.carousel').carousel({
-      interval: 6000
-    })
-  });
+	$(document).ready(function() {
+		$('.carousel').carousel({
+		  interval: 4000		  
+		});    
+
+		$("#arrivalDay").datepicker({minDate:new Date()}).change(function (event) {
+		    event.preventDefault();
+		    var idff="leaveDay", el = '<input type="text" id="leaveDay" placeholder="dd/mm/yyyy" autocomplete="off"/><i class="fa fa-calendar"></i>';
+		    loadLeaveDateFNC(this.value, el, idff);
+		});
+
+		document.getElementById("rooms").addEventListener("change", function(){
+			rooms = parseInt(this.value);
+			switch(rooms){
+				case 1:
+					if(!$("#room2").hasClass("collapse")) $("#room2").addClass("collapse");
+					if(!$("#room3").hasClass("collapse")) $("#room3").addClass("collapse");
+				break;
+				case 2:
+					if($("#room2").hasClass("collapse")) $("#room2").removeClass("collapse");
+					if(!$("#room3").hasClass("collapse")) $("#room3").addClass("collapse");
+				break;
+				case 3:				
+					if($("#room3").hasClass("collapse")) $("#room3").removeClass("collapse");
+				break;
+				default:
+				break;
+			}
+		},false);
+
+	});
+
+	function loadLeaveDateFNC(fi, el, idff) {
+		$("#divLeaveDay").html("");
+		$("#divLeaveDay").html(el);
+		$("#"+idff).datepicker({
+		    minDate: fi
+		});
+	}
+
+	/*funcion para hotel*/
+	function sendFormHFNC(hotel,arrivalDay,leaveDay,rooms,adults,children){
+		/*
+		$.ajax({
+				type:"post",
+				url:"Archive.aspx/Function",
+				contentType:"application/json; charset=utf-8",
+				dataType:"json",	
+				async:false,
+				data:JSON.stringify({hotel:hotel,arrivalDay:arrivalDay,leaveDay:leaveDay,rooms:rooms,adults:adults,children:children}),
+				success:function(response){
+					var rString = response.d;//case response is string
+					var obj = $.parseJSON(response.d);//case response is object
+					//function response here
+					alert("x");	
+				},
+				error:function(response){
+					console.log(response.d);
+		    		alert("y");
+				}
+		});
+		*/
+		console.log("enviando..."+hotel+" "+arrivalDay+" "+leaveDay+" "+rooms+" "+adults+" "+children);
+	}
+
 </script>
 </html>

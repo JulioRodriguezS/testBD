@@ -137,14 +137,19 @@ body{
 	background: #03374c;
 	color: white;
     min-height: 28px;
+    padding-left: 5px;
+}
+#sendForm #arrivalDay, #sendForm #leaveDay{
+    max-width: 137px;
 }
 #sendForm #hotelI{
 	max-height: 28px;
 	margin-bottom: 5px;
+	border-radius: 0;
 }
 #sendForm i{	
-	margin-left: 3px;
-	font-size:27px;
+	margin-left: 5px;
+	font-size:25px;
 	color: #03374c;
     vertical-align: bottom;
 }
@@ -263,6 +268,9 @@ body{
 	color: #043e56;
 	font-weight: lighter;
 	font-size: 0.8em;	
+}
+.principal-atractions-rows .row:nth-child(n+2):nth-child(-n+4){
+	margin-top: 10px;
 }
 .principal-atractions-item .destiny{
 	font-weight: bold;	
