@@ -1,0 +1,346 @@
+@font-face {
+  font-family: myriadProBold;
+  src: url(../fonts/Myriad-Pro_31655.ttf);
+}
+@font-face {
+  font-family: myriadProBoldItalic;
+  src: url(../fonts/Myriad-Pro-Black-Italic_31618.ttf);
+}
+@font-face {
+  font-family: myriadProLight;
+  src: url(../fonts/Myriad-Pro-Light_31642.ttf);
+}
+@font-face {
+  font-family: myriadProLightSemi;
+  src: url(../fonts/Myriad-Pro-Light-SemiExtended_31641.ttf);
+}
+@font-face {
+  font-family: myriadProSemiBold;
+  src: url(../fonts/Myriad-Pro-Semibold_31650.ttf);
+}
+@font-face {
+  font-family: myriadProCondensed;
+  src: url(../fonts/Myriad-Pro-Semibold-Condensed_31644.ttf);
+}
+
+body{
+	font-family: arial;
+	background: rgba(14,88,120,1);
+	background: -moz-linear-gradient(top, rgba(14,88,120,1) 0%, rgba(14,89,120,0) 40%, rgba(14,89,120,0) 41%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(14,88,120,1)), color-stop(40%, rgba(14,89,120,0)), color-stop(41%, rgba(14,89,120,0)));
+	background: -webkit-linear-gradient(top, rgba(14,88,120,1) 0%, rgba(14,89,120,0) 40%, rgba(14,89,120,0) 41%);
+	background: -o-linear-gradient(top, rgba(14,88,120,1) 0%, rgba(14,89,120,0) 40%, rgba(14,89,120,0) 41%);
+	background: -ms-linear-gradient(top, rgba(14,88,120,1) 0%, rgba(14,89,120,0) 40%, rgba(14,89,120,0) 41%);
+	background: linear-gradient(to bottom, rgba(14,88,120,1) 0%, rgba(14,89,120,0) 40%, rgba(14,89,120,0) 41%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e5878', endColorstr='#0e5978', GradientType=0 );
+}
+
+.principal-title{
+	font-family: myriadProBold;
+	line-height: 1em;	
+	color: white;
+	font-size: 18px;
+	margin-left: 20px;	
+}
+.title-aside-logo{
+	min-height: 65px;
+    vertical-align: text-top;
+}
+.principal-title img{
+	width: 65px;
+}
+.principal-title .hotelsFrom{
+	font-family: myriadProLight;
+	font-weight: lighter;
+}
+.inlines{
+	display: inline-block;    
+}
+.header{
+	position: relative;
+}
+.line-top-header{
+    min-height: 129px;
+	padding-top: 20px;
+	background: rgba(14,89,120,1);
+	background: -moz-linear-gradient(left, rgba(14,89,120,1) 0%, rgba(5,84,117,0.02) 53%, rgba(5,84,117,0) 54%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(14,89,120,1)), color-stop(53%, rgba(5,84,117,0.02)), color-stop(54%, rgba(5,84,117,0)));
+	background: -webkit-linear-gradient(left, rgba(14,89,120,1) 0%, rgba(5,84,117,0.02) 53%, rgba(5,84,117,0) 54%);
+	background: -o-linear-gradient(left, rgba(14,89,120,1) 0%, rgba(5,84,117,0.02) 53%, rgba(5,84,117,0) 54%);
+	background: -ms-linear-gradient(left, rgba(14,89,120,1) 0%, rgba(5,84,117,0.02) 53%, rgba(5,84,117,0) 54%);
+	background: linear-gradient(to right, rgba(14,89,120,1) 0%, rgba(5,84,117,0.02) 53%, rgba(5,84,117,0) 54%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e5978', endColorstr='#055475', GradientType=1 );
+}
+
+/*parte izquierda header*/
+.reservation-number{	
+	color:#0a5675;
+	font-size: 16px;
+	line-height: 1.6em;
+	margin-right: 20px;
+}
+.reservation-phone{
+	font-size: 32px;
+}
+
+/*Menu principal*/
+.line-options-down-header{
+    margin-top: -16px;
+}
+#principal-menu ul li{
+	list-style: none;
+	display: inline-block;	
+	padding: 10px;
+	background: white;
+	color:#35b5e2;
+	margin:-3px;
+}
+#principal-menu ul li:hover{
+	background: #35b5e2;
+	color: white;
+	cursor:hand;
+	cursor:pointer;
+}
+/*formulario*/
+.nav, .nav-tabs{
+	border: none;
+}
+.tab-content{
+	padding: 5px;
+    min-height: 135px;
+}
+#sendFormTabsContent .tab-pane{
+	padding-bottom: 20px;
+}
+
+#sendForm{
+	min-width: 478px;
+	background: #1d81aa;
+	font-size: 12px;
+	color: white;
+    margin-left: 35px;
+    margin-top: 70px;
+}
+#sendForm .reserve-online{	
+    padding: 4px;
+    text-align: center;
+    font-size: 16px;
+    color: #3ecdff;
+    background: #03374c;
+    margin-bottom: 15px;
+}
+#sendForm label{
+	display: initial;	
+}
+#sendForm input{
+	border: none;
+	background: #03374c;
+	color: white;
+    min-height: 28px;
+}
+#sendForm #hotelI{
+	max-height: 28px;
+	margin-bottom: 5px;
+}
+#sendForm i{	
+	margin-left: 3px;
+	font-size:27px;
+	color: #03374c;
+    vertical-align: bottom;
+}
+#sendForm .sendFormIns input{
+	max-width: 86%;
+}
+#sendForm button{
+	margin:0 auto;
+	border: none;
+    padding: 10px 7px;
+    border-radius: 5px;
+    color: white;
+    background: rgba(0,193,252,1);
+	background: -moz-linear-gradient(top, rgba(0,193,252,1) 0%, rgba(33,180,226,1) 64%, rgba(1,136,198,1) 93%, rgba(1,136,198,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,193,252,1)), color-stop(64%, rgba(33,180,226,1)), color-stop(93%, rgba(1,136,198,1)), color-stop(100%, rgba(1,136,198,1)));
+	background: -webkit-linear-gradient(top, rgba(0,193,252,1) 0%, rgba(33,180,226,1) 64%, rgba(1,136,198,1) 93%, rgba(1,136,198,1) 100%);
+	background: -o-linear-gradient(top, rgba(0,193,252,1) 0%, rgba(33,180,226,1) 64%, rgba(1,136,198,1) 93%, rgba(1,136,198,1) 100%);
+	background: -ms-linear-gradient(top, rgba(0,193,252,1) 0%, rgba(33,180,226,1) 64%, rgba(1,136,198,1) 93%, rgba(1,136,198,1) 100%);
+	background: linear-gradient(to bottom, rgba(0,193,252,1) 0%, rgba(33,180,226,1) 64%, rgba(1,136,198,1) 93%, rgba(1,136,198,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c1fc', endColorstr='#0188c6', GradientType=0 );
+}
+#sendForm .btn-reserve{
+	margin-top: 30px;
+}
+/*pisando estilos bootstrap*/
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+	background-color: #1d81aa;	
+	color: #3ecdff;
+	border:none;
+}
+.nav-tabs .nav-item.show .nav-link,.nav-tabs .nav-link{
+	color: #03374c;
+}
+.nav-tabs .nav-item.show .nav-link:hover, .nav-tabs .nav-link:hover{
+	border: none;
+	color: #3ecdff;
+	background-color: #1f4250;
+	margin-top: 5px;
+    margin-left: 5px;
+	padding: 4px;
+    border-radius: 5px;
+    transition: all ease .3s;
+}
+/*contenido principal*/
+.principal-content{
+    margin-top: 20px;
+}
+.description{
+	/*width: 54%;*/
+}
+.description p{
+	color:#64808c;
+	text-align: left;
+}
+.description span{
+	color:#64808c;
+	text-align: left;
+}
+.description h1,h2,h3,h4,h5,h6{
+	color: #043e56;	
+	font-weight: bold;
+}
+
+.description h1{
+	font-size: 2em;	
+}
+.principal-atractions{
+	/*width: 45%;
+	margin-left: .5%;*/
+	border-left: 1px solid #e4f0f6;
+	padding-left: 20px;
+}
+
+#package-promotions{
+	background: rgba(218,231,234,0);
+	background: -moz-linear-gradient(top, rgba(218,231,234,0) 37%, rgba(218,231,234,0.02) 38%, rgba(218,231,234,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(37%, rgba(218,231,234,0)), color-stop(38%, rgba(218,231,234,0.02)), color-stop(100%, rgba(218,231,234,1)));
+	background: -webkit-linear-gradient(top, rgba(218,231,234,0) 37%, rgba(218,231,234,0.02) 38%, rgba(218,231,234,1) 100%);
+	background: -o-linear-gradient(top, rgba(218,231,234,0) 37%, rgba(218,231,234,0.02) 38%, rgba(218,231,234,1) 100%);
+	background: -ms-linear-gradient(top, rgba(218,231,234,0) 37%, rgba(218,231,234,0.02) 38%, rgba(218,231,234,1) 100%);
+	background: linear-gradient(to bottom, rgba(218,231,234,0) 37%, rgba(218,231,234,0.02) 38%, rgba(218,231,234,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dae7ea', endColorstr='#dae7ea', GradientType=0 );
+	margin-right: 0;
+    padding-right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#package-promotions-img{
+    padding-left: 0;
+    margin-left: 0;
+	overflow: hidden;
+	border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#package-promotions h3{
+	color:#64808c;
+}
+#package-promotions-img img{
+	width: 100%;
+	min-height: 100%;
+}
+
+/*principal atracttions items*/
+.principal-atractions-item div:nth-child(2){
+	background: #e4f0f6;
+	padding: 7px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.principal-atractions-item .row div:nth-child(1){
+	padding-right: 0;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.principal-atractions-item{
+	color: #043e56;
+	font-weight: lighter;
+	font-size: 0.8em;	
+}
+.principal-atractions-item .destiny{
+	font-weight: bold;	
+	font-size: 1.2em;
+}
+.principal-atractions-item .price{
+	font-weight: bold;	
+	font-size: 1.5em;	
+}
+.principal-atractions-item img{
+	width: 100%;
+	min-height: 100%;
+}
+.principal-atractions-item button{
+	background: #35b5e2;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: .9em;
+}
+/*slider*/
+#carouselSlides{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	max-height: 500px;
+	overflow: hidden;
+}
+.carousel-item img{
+	width: 100%;
+}
+.carousel-item a:hover{
+	cursor:hand;
+	cursor:pointer;
+}
+/*iconos 112 72*/
+.icon-description-after-footer{
+	margin-top:20px;
+}
+.icon-description-after-footer ul{	
+	text-align: center;
+	width: 100%;
+}
+.icon-description-after-footer ul li{
+	list-style: none;
+	display: inline-block;
+	width: 19%;
+}
+/*footer*/
+.footer{
+	background: #e4f0f6;
+	color: #6f8994;
+	font-size: 0.8em;
+    font-weight: bold;
+    padding-bottom: 1px;
+}
+.footer ul{
+	padding-top: 10px;
+}
+.footer ul, p{
+	text-align: center;	
+}
+.footer ul li{
+	list-style: none;
+	display: inline-block;	
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.footer ul li:nth-child(n+2):nth-child(-n+4){
+	border-left: 1px solid;
+}
+
+/*query responsives*/
+@media screen and (max-width: 768px){	
+	#package-promotions-img img, .principal-atractions-item img{ 
+		width: auto;
+	}	
+	.line-options-down-header{
+		margin-top: 5px;
+	}
+}
